@@ -1,4 +1,4 @@
-package com.bardolog1.xmarket;
+package com.bardolog1.xmarket.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
