@@ -1,24 +1,20 @@
 package com.bardolog1.xmarket.persistance.entity;
 
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
 @Table(name = "compras_productos")
 public class ComprasProducto {
 
     @EmbeddedId
     private ComprasProductoPK id;
-
-
     private Integer cantidad;
     private Double total;
     private Boolean estado;
 
     @ManyToOne
-    @JoinColumn(name = "id_compra" , insertable = false, updatable = false)
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
     @ManyToOne
@@ -55,5 +51,21 @@ public class ComprasProducto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }

@@ -39,7 +39,7 @@ public class ProductoRepository implements ProductRepository {
     }
 
     @Override
-    public Product saveProducto(Product product) {
+    public Product saveProduct(Product product) {
         Producto producto = mapper.toProducto(product);
         return mapper.toProduct(productoCrudRepository.save(producto));
     }
@@ -53,7 +53,7 @@ public class ProductoRepository implements ProductRepository {
 
 
     @Override
-    public void deleteProducto(int idProducto){
+    public void deleteProduct(int idProducto){
         productoCrudRepository.deleteById(idProducto);
 
     }
