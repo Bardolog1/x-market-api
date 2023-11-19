@@ -10,6 +10,6 @@ public interface ProductRepository {
     Optional<List<Product>> getByCategory(int categoryId);
     Optional<List<Product>> getPocaExistencia(int quantity);
     Optional<Product> getProduct(int productId);
-    Product saveProducto(Product product);
-    void deleteProducto(int productId);
+    Product saveProduct(Product product);
+    void deleteProduct(int productId);
 }

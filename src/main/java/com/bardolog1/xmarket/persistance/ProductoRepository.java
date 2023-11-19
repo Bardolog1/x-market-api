@@ -5,6 +5,7 @@ import com.bardolog1.xmarket.domain.repository.ProductRepository;
 import com.bardolog1.xmarket.persistance.crud.ProductoCrudRepository;
 import com.bardolog1.xmarket.persistance.entity.Producto;
 import com.bardolog1.xmarket.persistance.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,11 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+
+    @Autowired
     private ProductoCrudRepository  productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
 
