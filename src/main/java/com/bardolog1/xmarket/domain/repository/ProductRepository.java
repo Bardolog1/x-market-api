@@ -1,7 +1,6 @@
 package com.bardolog1.xmarket.domain.repository;
 
 import com.bardolog1.xmarket.domain.Product;
-
 import java.util.List;
 import java.util.Optional;
 
